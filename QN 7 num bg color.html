@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Numbers 0 to 100</title>
+    <style>
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .number{
+            width: 50px;
+            height: 25px;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        let container = document.getElementById("container");
+        function isPrime(num) {
+            if (num < 2) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        for (let i = 0; i <= 100; i++) {
+            let div = document.createElement("div");
+            div.textContent = i;
+            div.className = "number";
+            if (isPrime(i)) {
+                div.style.backgroundColor = "red";
+            }
+            else if (i % 2 === 0) {
+                div.style.backgroundColor = "green";
+            }
+            else {
+                div.style.backgroundColor = "yellow";
+                div.style.color = "black";
+            }
+            container.appendChild(div);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 268px;
+            border: solid 1px black;
+            margin-top: 50px;
+        }
+
+        .row {
+            height: 50px;
+            border: solid 1px rgb(16, 235, 27);
+            margin: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        #main {
+            width: 300px;
+            border: solid 1px rgb(235, 16, 16);
+            height: 50px;
+            justify-content: left;
+            font-size: 30px;
+        }
+
+        .button {
+            width: 100px;
+            height: 50px;
+            background-color: green;
+            color: white;
+            font-size: 30px;
+            border-radius:5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <input type="text" id="main">
+            <button onclick="clear1()" class="button">Clear</button>
+        </div>
+        <div class="row">
+            <button onclick="butto(1)" class="button">1</button>
+            <button onclick="butto(2)" class="button">2</button>
+            <button onclick="butto(3)" class="button">3</button>
+            <button onclick="butto('/')" class="button">/</button>
+        </div>
+        <div class="row">
+            <button onclick="butto(4)" class="button">4</button>
+            <button onclick="butto(5)" class="button">5</button>
+            <button onclick="butto(6)" class="button">6</button>
+            <button onclick="butto('*')" class="button">X</button>
+        </div>
+        <div class="row">
+            <button onclick="butto(7)" class="button">7</button>
+            <button onclick="butto(8)" class="button">8</button>
+            <button onclick="butto(9)" class="button">9</button>
+            <button onclick="butto('-')" class="button">-</button>
+        </div>
+        <div class="row">
+            <button onclick="butto(0)" class="button">0</button>
+            <button onclick="butto('.')" class="button">.</button>
+            <button onclick="calculate()" class="button">=</button>
+            <button onclick="butto('+')" class="button">+</button>
+        </div>
+    </div>
+    <script>
+        function butto(value) {
+            document.getElementById("main").value += value;
+        }
+        function clear1(){
+            document.getElementById("main").value = '';
+        }
+        function calculate(){
+            let res=document.getElementById("main").value;
+            document.getElementById("main").value = eval(res);
+        }
+    </script>
+
+</body>
+
+</htm

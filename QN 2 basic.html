@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>enter any first number</label><br>
+    <input type="number" id="1st"><br>
+    <label>enter any second number</label><br>
+    <input type="number" id="2nd"><br>
+    <P class="p1"></P>
+    <button onclick="sum()">+</button>
+    <button onclick="diff()">-</button>
+    <button onclick="mul()">X</button>
+    <button onclick="div()">/</button>
+    <script>
+        const res = document.getElementsByClassName("p1")[0];
+        function sum() {
+            let x = Number(document.getElementById("1st").value);
+            let y = Number(document.getElementById("2nd").value);
+            res.innerHTML = "The sum is " + (x + y);
+        }
+        function diff() {
+            let x = Number(document.getElementById("1st").value);
+            let y = Number(document.getElementById("2nd").value);
+            res.innerHTML = "The difference is " + (x - y);
+        }
+        function mul() {
+            let x = Number(document.getElementById("1st").value);
+            let y = Number(document.getElementById("2nd").value);
+            res.innerHTML = "The product is " + (x * y);
+        }
+        function div() {
+            let x = Number(document.getElementById("1st").value);
+            let y = Number(document.getElementById("2nd").value);
+            res.innerHTML = "The division is " + (x / y);
+        }
+    </script>
+</body>
+</html>

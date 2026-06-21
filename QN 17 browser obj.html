@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigator Object</title>
+</head>
+<body>
+
+<h2>Navigator Information</h2>
+
+<script>
+document.write("Browser Name: " + navigator.appName + "<br>");
+document.write("Browser Version: " + navigator.appVersion + "<br>");
+document.write("Platform: " + navigator.platform + "<br>");
+
+navigator.geolocation.getCurrentPosition(function(pos)
+{
+    document.write("Latitude: " + pos.coords.latitude + "<br>");
+    document.write("Longitude: " + pos.coords.longitude);
+});
+</script>
+</body>
+</html>

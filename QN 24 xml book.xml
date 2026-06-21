@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="QN 26 books.xsd">
+    <book>
+        <id>1</id>
+        <title>Web Technology</title>
+        <author>Ram Sharma</author>
+        <publisher>ABC Publication</publisher>
+        <price>500</price>
+    </book>
+    <book>
+        <id>2</id>
+        <title>Java Programming</title>
+        <author>Hari Karki</author>
+        <publisher>XYZ Publication</publisher>
+        <price>750</price>
+    </book>
+    <book>
+        <id>3</id>
+        <title>Database Management System</title>
+        <author>Sita Thapa</author>
+        <publisher>PQR Publication</publisher>
+        <price>650</price>
+    </book>
+</books>

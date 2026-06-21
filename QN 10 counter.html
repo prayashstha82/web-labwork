@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pa{
+            display :flex;
+            gap:10px;
+            margin:5px;
+        }
+        #rese{
+            margin-left: 50px;
+            background-color: green;
+        }
+        #m,#a{
+            width:50px;
+            height:30px;
+            justify-content: center;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>counter</h1>
+    <div class="pa">
+        <button id="m">-</button>
+        <p id="display">0</p>
+        <button id="a">+</button><br>
+    </div>
+    <button id="rese">Reset</button>
+<script>
+    const min=document.getElementById("m");
+    const dis=document.getElementById("display");
+    const max=document.getElementById("a");
+    const rest=document.getElementById("rese");
+    let counter=parseInt(dis.innerHTML);
+    min.addEventListener("click",function(){
+        counter=counter-1;
+        dis.innerHTML=counter;
+    })
+    max.addEventListener("click",function(){
+        counter=counter+1;
+        dis.innerHTML=counter; 
+    }
+    )
+    rest.addEventListener("click",function(){
+        counter=0;
+        dis.innerHTML=counter; 
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+    <p id="p1">This is Paragraph 1</p>
+    <p id="p2">This is Paragraph 2</p>
+    <p id="p3">This is Paragraph 3</p>
+    <p id="p4">This is Paragraph 4</p>
+
+    <script>
+
+        // a. Get first paragraph using querySelector(tagname)
+        let firstPara = document.querySelector("p");
+        console.log(firstPara.textContent);
+
+        // b. Get each paragraph using querySelector('#id')
+        let para1 = document.querySelector("#p1");
+        let para2 = document.querySelector("#p2");
+        let para3 = document.querySelector("#p3");
+        let para4 = document.querySelector("#p4");
+
+        // c. Get all paragraphs as NodeList
+        let paragraphs = document.querySelectorAll("p");
+
+        // d. Loop through NodeList and display text content
+        paragraphs.forEach(function(p){
+            console.log(p.textContent);
+        });
+
+        // e. Set text content of fourth paragraph
+        para4.textContent = "Fourth Paragraph";
+
+        // f. Set id and class attributes
+        para1.setAttribute("class","para");
+        para2.className = "para";
+        para3.setAttribute("class","para");
+        para4.className = "para";
+
+        // g. Change style of each paragraph
+        paragraphs.forEach(function(p){
+            p.style.backgroundColor = "lightyellow";
+            p.style.border = "1px solid black";
+            p.style.fontSize = "20px";
+            p.style.fontFamily = "Arial";
+        });
+
+        // h. Color 1st & 3rd green, 2nd & 4th red
+        paragraphs.forEach(function(p,index){
+            if(index==0 || index==2){
+                p.style.color = "green";
+            }
+            else{
+                p.style.color = "red";
+            }
+        });
+
+        // i. Set text content, id and class to each paragraph
+        paragraphs.forEach(function(p,index){
+            p.textContent = "Paragraph " + (index + 1);
+            p.id = "newp" + (index + 1);
+            p.className = "newClass";
+        });
+
+    </script>
+
+</body>
+</html>

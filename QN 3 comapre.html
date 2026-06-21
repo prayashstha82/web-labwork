@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>enter any first number</label><br>
+    <input type="number" id="1st"><br>
+    <label>enter any second number</label><br>
+    <input type="number" id="2nd"><br>
+    <P class="p1"></P>
+    <button onclick="compare()">compare</button>
+    <script>
+        const res = document.getElementsByClassName("p1")[0];
+        function compare() {
+            let x = Number(document.getElementById("1st").value);
+            let y = Number(document.getElementById("2nd").value);
+            if(x<y){
+                res.innerHTML="the greatest is "+y +"the smallest is "+x;
+            }
+            else{
+                res.innerHTML="The greatest is "+x +"<br>The smallest is "+y;
+            }
+        }
+    </script>
+</body>
+</html>

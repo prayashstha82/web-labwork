@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countries Table</title>
+</head>
+<body>
+<h2>Countries List</h2>
+<table border="1" id="table"></table>
+<script>
+    let countries = [
+        "Nepal","India","China","USA","UK","Canada",
+        "Japan","Korea","France","Germany","Italy","Spain",
+        "Brazil","Argentina","Mexico","Russia","Australia","New Zealand",
+        "Portugal","Netherlands","Belgium","Switzerland","Sweden","Norway",
+        "Denmark","Finland","Thailand","Vietnam","Malaysia","Singapore",
+        "Indonesia","Philippines","Sri Lanka","Pakistan","Bangladesh","UAE",
+        "Saudi Arabia","Qatar","Oman","Turkey","Egypt","South Africa",
+        "Kenya","Nigeria","Ghana","Morocco","Chile","Peru",
+        "Colombia","Poland"
+    ];
+    let table = document.getElementById("table");
+    let row;
+    for(let i = 0; i < countries.length; i++) {
+        if(i % 6 == 0) {
+            row = table.insertRow();
+        }
+        let cell = row.insertCell();
+        cell.innerHTML = countries[i];
+    }
+</script>
+</body>
+</html>

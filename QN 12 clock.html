@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<style>
+    .clock{
+        width:300px;
+        padding:15px;
+        background-color:rgb(125,114,221);
+        text-align:center;
+        color:white;
+    }
+
+    .t{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
+    }
+
+    #hrs,#min,#sec{
+        width:60px;
+        height:60px;
+        background-color:white;
+        color:black;
+        font-size:30px;
+        font-weight:bold;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border-radius:5px;
+    }
+
+    .colon{
+        font-size:30px;
+        font-weight:bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="clock">
+    <h2>DIGITAL CLOCK</h2>
+
+    <div class="t">
+        <div id="hrs">00</div>
+        <div class="colon">:</div>
+        <div id="min">00</div>
+        <div class="colon">:</div>
+        <div id="sec">00</div>
+    </div>
+</div>
+
+<script>
+function updateClock(){
+    let now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+    document.getElementById("hrs").innerHTML = h;
+    document.getElementById("min").innerHTML = m;
+    document.getElementById("sec").innerHTML = s;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>

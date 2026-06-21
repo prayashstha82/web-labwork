@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events Example</title>
+</head>
+<body>
+<h2>Paragraph Event Demo</h2>
+<p id="para" style="font-size:12px;">
+    This is a sample paragraph hai ta 
+</p>
+<button onclick="changeBg()">Change Background</button>
+<button onclick="changeParaBg()">Change Paragraph Background</button>
+<button onclick="hidePara()">Hide Paragraph</button>
+<button onclick="showPara()">Show Paragraph</button>
+<button onclick="increaseFont()">Increase Font Size</button>
+<button onclick="decreaseFont()">Decrease Font Size</button>
+<button onclick="resetFont()">Reset Font (12pt)</button>
+<button onclick="changeTextColor()">Change Text Color</button>
+<script>
+    let fontSize = 12;
+    function changeBg() {
+        document.body.style.backgroundColor = "lightblue";
+    }
+    function changeParaBg() {
+        document.getElementById("para").style.backgroundColor = "yellow";
+    }
+    function hidePara() {
+        document.getElementById("para").style.display = "none";
+    }
+    function showPara() {
+        document.getElementById("para").style.display = "block";
+    }
+    function increaseFont() {
+        fontSize += 2;
+        document.getElementById("para").style.fontSize = fontSize + "px";
+    }
+    function decreaseFont() {
+        fontSize -= 2;
+        document.getElementById("para").style.fontSize = fontSize + "px";
+    }
+    function resetFont() {
+        fontSize = 12;
+        document.getElementById("para").style.fontSize = "12pt";
+    }
+    function changeTextColor() {
+        document.getElementById("para").style.color = "red";
+    }
+</script>
+
+</body>
+</html>
