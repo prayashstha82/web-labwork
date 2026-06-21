@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  font-size: 13px;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #666;
+}
+
+.company-info p {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.invoice-title h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.invoice-meta table {
+  border-collapse: collapse;
+  margin-left: auto;
+}
+
+.invoice-meta td {
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+.invoice-meta td:first-child {
+  background: #e8e8e8;
+  font-weight: bold;
+}
+
+/* PAYMENT */
+.payment-terms {
+  text-align: right;
+  padding: 6px 0;
+  margin: 10px 0 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  color: #888;
+}
+
+/* BILL & SHIP */
+.bill-ship {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 25px;
+}
+
+.bill-ship h4 {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: #e8490a;
+}
+
+.bill-ship p {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #888;
+}
+
+/* TABLE */
+.items {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.items thead tr {
+  background: #e8490a;
+  color: white;
+}
+
+.items td {
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+.items tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.items tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.items tbody td {
+  color: #888;
+}
+
+/* BOTTOM */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remarks {
+  font-size: 12px;
+  color: #888;
+  max-width: 300px;
+}
+
+/* TOTALS */
+.totals {
+  width: 280px;
+}
+
+.totals table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.totals td {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.totals td:last-child {
+  text-align: right;
+  color: #888;
+}
+
+.totals td:first-child {
+  text-transform: uppercase;
+  color: #555;
+}
+
+/* BALANCE */
+.balance {
+  background: #e8490a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-section">
+      <div class="logo">LOGO</div>
+      <div class="company-info">
+        <p><strong style="color:#333;">&lt;Your Company Name&gt;</strong></p>
+        <p>&lt;Your address&gt;</p>
+        <p>&lt;Your contact details&gt;</p>
+      </div>
+    </div>
+
+    <div class="invoice-title">
+      <h1>INVOICE</h1>
+      <div class="invoice-meta">
+        <table>
+          <tr><td>DATE</td><td></td></tr>
+          <tr><td>INVOICE NO.</td><td></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Terms -->
+  <div class="payment-terms">
+    &lt;Payment terms (due on receipt, due in # days)&gt;
+  </div>
+
+  <!-- Bill / Ship -->
+  <div class="bill-ship">
+    <div>
+      <h4>Bill To</h4>
+      <p>&lt;Contact Name&gt;</p>
+      <p>&lt;Client Company Name&gt;</p>
+      <p>&lt;Address&gt;</p>
+      <p>&lt;Phone&gt;</p>
+      <p>&lt;Email&gt;</p>
+    </div>
+
+    <div>
+      <h4>Ship To</h4>
+      <p>&lt;Name / Dept&gt;</p>
+      <p>&lt;Client Company Name&gt;</p>
+      <p>&lt;Address&gt;</p>
+      <p>&lt;Phone&gt;</p>
+    </div>
+  </div>
+
+  <!-- Items -->
+  <table class="items">
+    <thead>
+      <tr>
+        <td>Description</td>
+        <td>QTY</td>
+        <td>Unit Price</td>
+        <td>Total</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+      <tr><td></td><td></td><td></td><td>0.00</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Bottom -->
+  <div class="bottom">
+    <div class="remarks">
+      Remarks / Payment Instructions:
+    </div>
+
+    <div class="totals">
+      <table>
+        <tr><td>Subtotal</td><td>0.00</td></tr>
+        <tr><td>Discount</td><td>0.00</td></tr>
+        <tr><td>Subtotal Less Discount</td><td>0.00</td></tr>
+        <tr><td>Tax Rate</td><td>0.00%</td></tr>
+        <tr><td>Total Tax</td><td>0.00</td></tr>
+        <tr><td>Shipping/Handling</td><td>0.00</td></tr>
+      </table>
+
+      <div class="balance">
+        <span>Balance Due $</span>
+        <span>-</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

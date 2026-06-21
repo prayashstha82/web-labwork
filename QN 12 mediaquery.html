@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery code</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: rgba(9, 9, 122, 0.808);
+
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background: aqua;
+            color: black;
+        }
+
+        /* Menu button hidden on big screen */
+
+        .menu {
+            display: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Small screen */
+        @media(max-width:600px) {
+
+            nav {
+                display: none;
+                width: 70%;
+                background: rgba(9, 9, 122, 0.808);
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+                padding: 10px;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .menu:hover+nav {
+                display: block;
+            }
+
+            header {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mystery code</h1>
+        <div class="menu">
+            Meanu
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Service</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </header>
+</body>
+</html>
